@@ -1,0 +1,203 @@
+
+ body {
+  font-family: Montserrat;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* headings  */
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* containers */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+
+/* sections */
+.colored {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: Ubuntu;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: Montserrat-light;
+}
+
+
+/* title section targeting an id requires # */
+
+/* child on the right, parent on the left.  Heirarchy goes right to left */
+/* if there were no space, it would be going for a specific element */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Download Button */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+.image-div {
+  position: relative;
+}
+/* title image */
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  z-index: -4;
+  /* because we have absolute positioning, i can exactly specify to move to the right */
+  right: 30%
+}
+
+/* features */
+
+#features {
+  /* how we got the centered alignment of all three objects in the row */
+  /* absolute removes the flow so we need to use relative */
+  position: relative;
+  /* referenze flow chart, but we made it so that the z index is not needed to put features above the image */
+  z-index: 1;
+}
+
+.feature-box {
+  /* centered everything in the row */
+  padding: 5%;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* testimonials */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-image {
+  /* made the dog picture smaller and circled it */
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#press {
+  /* made the press images center aligned */
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  /* made the logo images smaller and added some spacing */
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* pricing section */
+#pricing {
+  padding: 100px;
+}
+
+
+.pricing-column {
+  /* spaces between title and cards */
+  padding: 3% 2%;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* call to action section */
+
+
+/* footer section */
+#footer {
+  padding: 7% 15%;
+  background-color: #fff;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* adjust phone image and center align text when smaller than 1080 bc this is where the site started to look off */
+@media (max-width: 1028px) {
+  /* rotate back to zero and put image back in flow of document */
+  .title-image {
+    position: static;
+    transform: rotate(0deg);
+  }
+  #title {
+    /* center text, kept here because this is a different scenario */
+    text-align: center;
+  }
+}
